@@ -13,7 +13,7 @@ public class Main {
     public static HashMap<String, ArrayList<Country>> countryList = new HashMap<>(); //HashMap<String, ArrayList<Country>
 
     public static void main(String[] args) throws Exception {
-        
+
 //Create file object and scanner, scan file
         File countriesFile = new File("countries.txt");
         Scanner countryScanner = new Scanner(countriesFile);
