@@ -1,5 +1,4 @@
 package com.company;
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
@@ -7,13 +6,13 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
-
 public class Main {
-
     public static HashMap<String, ArrayList<Country>> countryList = new HashMap<>(); //HashMap<String, ArrayList<Country>
-
     public static void main(String[] args) throws Exception {
-
+        fileScan();
+        enterLetter();
+    }
+    public static void fileScan() throws Exception {
 //Create file object and scanner, scan file
         File countriesFile = new File("countries.txt");
         Scanner countryScanner = new Scanner(countriesFile);
@@ -36,7 +35,8 @@ public class Main {
             }
         }
 //end of while loop
-
+    }
+    public static void enterLetter() throws Exception  {
 //ask the user for the a letter they want the countries
         String letterEntered;
         Scanner scanner = new Scanner(System.in);
@@ -62,5 +62,6 @@ public class Main {
 //close the file
             fw.close();
         }
+
     }
 }
